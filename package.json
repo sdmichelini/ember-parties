@@ -15,6 +15,7 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "auth0-ember-simple-auth": "github:auth0/auth0-ember-simple-auth",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
     "ember-cli": "2.10.0",
@@ -34,6 +35,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
+    "ember-simple-auth": "1.1.0",
     "ember-welcome-page": "^1.0.3",
     "loader.js": "^4.0.10"
   },
