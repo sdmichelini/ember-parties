@@ -7,7 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('parties');
+  this.route('parties', function(){
+    //Dyanmic Route
+    this.route('guests',{ path: '/:party_id'});
+  });
   this.route('protected');
   this.route('login');
 });

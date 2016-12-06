@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 let parties = [
   {
@@ -20,8 +21,7 @@ let parties = [
     when: new Date("October 11, 2017 11:13:00")
   }
 ];
-
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model() {
     return parties;
   }
