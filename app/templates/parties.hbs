@@ -2,6 +2,10 @@
 
 <ul>
   {{#each model as |party|}}
-    <li class='party-open'><a href='#'>{{party.name}}</a></li>
+    <li class='party-open'>
+      {{#link-to 'party-detail' party.id}}
+        {{party.name}}
+      {{/link-to}}
+    </li>
   {{/each}}
 </ul>

@@ -16,6 +16,7 @@ describe('Parties test', ()=>{
             expect(party).to.have.property('name');
             expect(party).to.have.property('id');
             expect(party).to.have.property('date');
+            expect(party).to.have.property('type');
             //Get a valid ID for next test
             id = party.id;
           }
@@ -37,6 +38,7 @@ describe('Parties test', ()=>{
           expect(res.body.party).to.have.property('name');
           expect(res.body.party).to.have.property('id');
           expect(res.body.party).to.have.property('date');
+          expect(res.body.party).to.have.property('type');
 
           done();
         });

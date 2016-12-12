@@ -1,8 +1,8 @@
 'use strict';
 
 const PARTIES = [
-  {name: 'Highlighter', date:String(Date.now()), id: '1'},
-  {name: 'Toga', date:String(Date.now()+10), id: '2'}
+  {name: 'Highlighter', date:String(Date.now()), id: '1', type: 0},
+  {name: 'Toga', date:String(Date.now()+10), id: '2', type: 0}
 ];
 
 const GUESTS = [

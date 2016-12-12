@@ -1,0 +1,24 @@
+<h1>{{model.party.name}}</h1>
+<div class='row'>
+  <div class='col-xs-12 col-md-6' id='male-guests'>
+    <h3>Male Guests</h3>
+    <ul>
+    {{#each model.male_guests as |guest|}}
+      <li>{{guest.name}} - {{guest.added_by}}</li>
+    {{else}}
+      There are no males on the party list.
+    {{/each}}
+    </ul>
+  </div>
+  <div class='col-xs-12 col-md-6' id='female-guests'>
+    <h3>Female Guests</h3>
+    <ul>
+    {{#each model.female_guests as |guest|}}
+      <li>{{guest.name}} - {{guest.added_by}}</li>
+    {{else}}
+      There are no females on the party list.
+    {{/each}}
+    </ul>
+  </div>
+</div>
+{{outlet}}

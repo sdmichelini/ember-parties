@@ -1,8 +1,8 @@
-<h3>This is an example of route that does not require authentication.</h3>
+<h3>Welcome to Ember Parties.</h3>
 
 <h4>Clicking the link below will open the Auth0 login window</h4>
 {{#if session.isAuthenticated}}
-  <a {{ action 'logout' }}>Logout</a>
+  <button {{ action 'logout' }}>Logout</button>
 {{else}}
-  <a {{ action 'login' }}>Login</a>
+  <button {{ action 'login' }}>Login</button>
 {{/if}}

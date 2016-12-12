@@ -12,6 +12,8 @@ const parties_controller = require('./controllers/parties');
 //Start application vars
 let app = express();
 
+app.use(cors());
+
 //Basic Health Route
 app.get('/api/health', (req,res)=>{
   res.json({message:'OK.'});
