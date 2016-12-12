@@ -18,6 +18,7 @@ app.get('/api/health', (req,res)=>{
 });
 
 app.get('/api/parties', parties_controller.getParties);
+app.get('/api/parties/:id', parties_controller.getPartyById);
 
 //Export the application
 module.exports = app;
