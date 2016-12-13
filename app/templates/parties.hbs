@@ -1,7 +1,7 @@
 <h2>List of Parties</h2>
 
 <ul>
-  {{#each model as |party|}}
+  {{#each model.parties as |party|}}
     <li class='party-open'>
       {{#link-to 'party-detail' party.id}}
         {{party.name}}

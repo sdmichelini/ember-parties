@@ -1,13 +1,17 @@
 'use strict';
 
+const utils = require('../util/response');
+
 const PARTIES = [
-  {name: 'Highlighter', date:String(Date.now()), id: '1', type: 0},
-  {name: 'Toga', date:String(Date.now()+10), id: '2', type: 0}
+  {id: '1', name: 'Highlighter', date:String(Date.now()), type: 0},
+  {id: '2', name: 'Toga', date:String(Date.now()+10), type: 0}
 ];
 
 const GUESTS = [
   {name: 'Test Person', added_by: 'Test Brother', male:true },
-  {name: 'Test 2 Person', added_by: 'Test Brother', male:false }
+  {name: 'Test 2 Person', added_by: 'Test Brother', male:false },
+  {name: 'Test Person', added_by: 'Test Brother', male:true },
+  {name: 'Matthew Freed', added_by: 'The Fraternity', male:false }
 ];
 
 //Get Parties
@@ -27,7 +31,7 @@ let getPartyById = (req, res)=> {
   party = party[0];
   if(!party) {
     res.status(404);
-    res.json({message:'Party w/ Given ID not found.'});
+    res.json(utils.generateError('Party w/ Given ID not found'));
   } else {
     for(let guest of GUESTS) {
       if(guest.male) {

@@ -57,5 +57,11 @@ module.exports = function(environment) {
     domain: "tkezm.auth0.com"
   }
 
+  if (environment === 'development') {
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    };
+  }
+
   return ENV;
 };
