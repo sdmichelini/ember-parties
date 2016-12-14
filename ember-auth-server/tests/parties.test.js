@@ -30,11 +30,6 @@ describe('Parties test', ()=>{
         .end((err, res)=>{
           expect(err).to.not.be.ok;
           expect(res.body).to.have.property('party');
-          expect(res.body.males).to.be.instanceof(Array);
-          expect(res.body.males.length).to.be.above(0);
-          expect(res.body.females).to.be.instanceof(Array);
-          expect(res.body.females.length).to.be.above(0);
-
           expect(res.body.party).to.have.property('name');
           expect(res.body.party).to.have.property('id');
           expect(res.body.party).to.have.property('date');

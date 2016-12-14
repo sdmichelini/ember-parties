@@ -26,4 +26,5 @@ describe('API Test', ()=>{
   });
   //Load the Parties Test
   require('./parties.test');
+  require('./guests.test');
 });

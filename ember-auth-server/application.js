@@ -21,7 +21,7 @@ app.get('/api/health', (req,res)=>{
 });
 
 app.get('/api/parties', parties_controller.getParties);
-//app.get('/api/parties/:id', parties_controller.getPartyById);
+app.get('/api/parties/:id', parties_controller.getPartyById);
 
 //Get list of guests for a party
 app.get('/api/guests/:party_id', guests_controller.getGuestForParty);

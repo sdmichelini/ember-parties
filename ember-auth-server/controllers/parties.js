@@ -12,6 +12,22 @@ let getParties = (req, res)=>{
   res.json({parties: PARTIES});
 };
 
+let getPartyById = (req, res)=>{
+  let party = PARTIES.filter((party)=>{
+    return party.id === req.params.id;
+  });
+  if(party) {
+    res.json({
+      party: party[0]
+    });
+  } else {
+    res.status(404);
+    res.json(generateError('Party Not Found.'));
+  }
+
+};
+
 module.exports ={
-  getParties: getParties
+  getParties: getParties,
+  getPartyById: getPartyById
 }

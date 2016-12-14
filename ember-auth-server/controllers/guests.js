@@ -13,7 +13,7 @@ const GUESTS = [
 
 //Get Guests for Party
 let getGuestForParty = (req, res)=>{
-  guests = GUESTS.filter((guest)=>{
+  let guests = GUESTS.filter((guest)=>{
     return guest.party_id == req.params.party_id;
   });
   res.json({guests: guests});
