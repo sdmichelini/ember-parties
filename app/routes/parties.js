@@ -3,6 +3,7 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model() {
-    return Ember.$.getJSON('/api/parties');
+    //return [];
+    return this.get('store').findAll('party');
   }
 });

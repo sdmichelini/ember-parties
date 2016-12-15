@@ -24,7 +24,7 @@ app.get('/api/parties', parties_controller.getParties);
 app.get('/api/parties/:id', parties_controller.getPartyById);
 
 //Get list of guests for a party
-app.get('/api/guests/:party_id', guests_controller.getGuestForParty);
+app.get('/api/guests', guests_controller.getGuestForParty);
 
 
 //Export the application

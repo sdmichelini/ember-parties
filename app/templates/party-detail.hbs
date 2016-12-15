@@ -1,4 +1,3 @@
-<h2>{{model.party.name}}</h2>
 <div class='row'>
   <div class='col-xs-12 omnibar'>
     <input type='text' class="form-control" placeholder="Enter name or group."/>
@@ -13,8 +12,10 @@
   <div class='col-xs-12 col-md-6' id='male-guests'>
     <h3>Male Guests</h3>
     <ul>
-    {{#each model.males as |guest|}}
-      <li class='guests' id='male-guests'><strong>{{guest.name}}</strong> - <small>{{guest.added_by}}</small></li>
+    {{#each model as |guest|}}
+      {{#if guest.male }}
+        <li class='guests' id='male-guests'><strong>{{guest.name}}</strong> - <small>{{guest.added_by}}</small></li>
+      {{/if}}
     {{else}}
       There are no males on the party list.
     {{/each}}
@@ -23,12 +24,16 @@
   <div class='col-xs-12 col-md-6' id='female-guests'>
     <h3>Female Guests</h3>
     <ul>
-    {{#each model.females as |guest|}}
-      <li class='guests' id='female-guests'><strong>{{guest.name}}</strong> - <small>{{guest.added_by}}</small></li>
+    {{#each model as |guest|}}
+      {{#if guest.male }}
+
+      {{ else }}
+        <li class='guests' id='female-guests'><strong>{{guest.name}}</strong> - <small>{{guest.added_by}}</small></li>
+      {{/if}}
     {{else}}
       There are no females on the party list.
     {{/each}}
-    </ul>
+  </ul>
   </div>
 </div>
 {{outlet}}
